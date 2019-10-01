@@ -29,21 +29,13 @@ __You are encouraged to collaborate with your peers.__ However, you are also res
 9. __Commit and sync your work to GitHub.__ Ask if you need help.
 10. __Discussion Questions__
   * How long did it take you to figure out how to do a bullet list in Markdown? What other formatting tricks did you try?
-  I figured out how to do the create a bullet list from looking back on past lectures. This was a helpful way to also see other formating tricks, such as, creating headers and writing in italics. I also uploaded photos from wikipedia and created a chart to display the w2h_data.csv because we were showed how to in class. 
   * Was there any code that you thought was particularly elegant? How about cryptic or buggy?
-  I think this line "raw_rows = [r.rstrip('\n').split(',') for r in raw_lines]" was very elegant and I still don't fully understand how it works. I also really enjoy the code to add another column to the chart with the body shapes.
   * What does the code `raw_lines = list(f)` in the first code cell do exactly? Where can we learn more about loading files? Why do we bother closing the file at the end of the cell?
-  f is defined as a variable that opens the csv file with all the data. `raw_lines = list(f)` creates a new variable that converts the information from the csv file into a list of strings which allows us to read the information and use it in python when writing code and calculating formulas. Firstly, closing the file in the end allows for the program to runs faster; if it stayed open it can use more space and slow down the performance of the program. Also, we wanted to make edits to the file, meaning adding the extra column with body-shape, therefore, we needed to close the file to make edits. 
   * In the second code cell, why do we try to clean up the data all at once? Why not just deal with it as raw strings?
-  
   * What is going on in the line below, also from the second code cell?  
   ```raw_rows = [r.rstrip('\n').split(',') for r in raw_lines]```
-  As I mentioned earlier I'm not 100% sure what this does, but I think it converts everything in the row from a string to a list in order to be able to iterate over the list and create conditionals for comparison and calculations. 
   * What does this do?  
   ```for raw_row in raw_rows[1:]:```
-  This makes sure the iteration happens starting at the second row in the chart, not the title line. [1:] is used to tell the code to start at ID 1. 
-  * In the third code cell, a list is extended by another list. What does that mean and how is that different from appending list items to the list? 
-  Append only adds a single element, however, extend expands the initial list and adds the new elements at the end of the first list. The code appends an item to the list. 
- * How could we do the same thing using `append()`?
+  * In the third code cell, a list is extended by another list. What does that mean and how is that different from appending list items to the list? How could we do the same thing using `append()`?
   * When might the calculation
   ```w2h_ratio = row[1]/row[2]``` give inaccurate results?
